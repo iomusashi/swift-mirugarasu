@@ -7,16 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		203F14D9D42A8240BA393EFB /* Pods_Mirror_Glass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20C556C8D36AE011B84B6AAA /* Pods_Mirror_Glass.framework */; };
 		66678B712846424300A93CED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678B702846424300A93CED /* AppDelegate.swift */; };
 		66678B732846424300A93CED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678B722846424300A93CED /* SceneDelegate.swift */; };
-		66678B752846424300A93CED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678B742846424300A93CED /* ViewController.swift */; };
-		66678B782846424300A93CED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66678B762846424300A93CED /* Main.storyboard */; };
 		66678B7B2846424300A93CED /* Mirror_Glass.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66678B792846424300A93CED /* Mirror_Glass.xcdatamodeld */; };
 		66678B7D2846424500A93CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66678B7C2846424500A93CED /* Assets.xcassets */; };
 		66678B802846424500A93CED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66678B7E2846424500A93CED /* LaunchScreen.storyboard */; };
 		66678B8B2846424500A93CED /* Mirror_GlassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678B8A2846424500A93CED /* Mirror_GlassTests.swift */; };
-		66678B952846424500A93CED /* Mirror_GlassUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678B942846424500A93CED /* Mirror_GlassUITests.swift */; };
-		66678B972846424500A93CED /* Mirror_GlassUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678B962846424500A93CED /* Mirror_GlassUITestsLaunchTests.swift */; };
+		66678BAA2846613F00A93CED /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BA92846613F00A93CED /* R.generated.swift */; };
+		87041A4F89AEFBBE12F2DBB7 /* Pods_Mirror_GlassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C67E8BD2AA1B415729F87F /* Pods_Mirror_GlassTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,30 +26,25 @@
 			remoteGlobalIDString = 66678B6C2846424300A93CED;
 			remoteInfo = "Mirror Glass";
 		};
-		66678B912846424500A93CED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 66678B652846424300A93CED /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 66678B6C2846424300A93CED;
-			remoteInfo = "Mirror Glass";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02C67E8BD2AA1B415729F87F /* Pods_Mirror_GlassTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mirror_GlassTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20C556C8D36AE011B84B6AAA /* Pods_Mirror_Glass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mirror_Glass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		552625C539C8687685FEA69E /* Pods-Mirror Glass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mirror Glass.release.xcconfig"; path = "Target Support Files/Pods-Mirror Glass/Pods-Mirror Glass.release.xcconfig"; sourceTree = "<group>"; };
 		66678B6D2846424300A93CED /* Mirror Glass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mirror Glass.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66678B702846424300A93CED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66678B722846424300A93CED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		66678B742846424300A93CED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		66678B772846424300A93CED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66678B7A2846424300A93CED /* Mirror_Glass.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mirror_Glass.xcdatamodel; sourceTree = "<group>"; };
 		66678B7C2846424500A93CED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66678B7F2846424500A93CED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66678B812846424500A93CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66678B862846424500A93CED /* Mirror GlassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mirror GlassTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66678B8A2846424500A93CED /* Mirror_GlassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mirror_GlassTests.swift; sourceTree = "<group>"; };
-		66678B902846424500A93CED /* Mirror GlassUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mirror GlassUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		66678B942846424500A93CED /* Mirror_GlassUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mirror_GlassUITests.swift; sourceTree = "<group>"; };
-		66678B962846424500A93CED /* Mirror_GlassUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mirror_GlassUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		66678BA92846613F00A93CED /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		9EDC58C89A45FCFACF05838E /* Pods-Mirror GlassTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mirror GlassTests.debug.xcconfig"; path = "Target Support Files/Pods-Mirror GlassTests/Pods-Mirror GlassTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CBBB55EB55F5F46446BC1E54 /* Pods-Mirror GlassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mirror GlassTests.release.xcconfig"; path = "Target Support Files/Pods-Mirror GlassTests/Pods-Mirror GlassTests.release.xcconfig"; sourceTree = "<group>"; };
+		D4F2E86BAB67D9461F73EA0D /* Pods-Mirror Glass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mirror Glass.debug.xcconfig"; path = "Target Support Files/Pods-Mirror Glass/Pods-Mirror Glass.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				203F14D9D42A8240BA393EFB /* Pods_Mirror_Glass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,26 +60,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		66678B8D2846424500A93CED /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				87041A4F89AEFBBE12F2DBB7 /* Pods_Mirror_GlassTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37725A45F9ACDA4187AA8872 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20C556C8D36AE011B84B6AAA /* Pods_Mirror_Glass.framework */,
+				02C67E8BD2AA1B415729F87F /* Pods_Mirror_GlassTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		416178926C28AED3EE5C7E52 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D4F2E86BAB67D9461F73EA0D /* Pods-Mirror Glass.debug.xcconfig */,
+				552625C539C8687685FEA69E /* Pods-Mirror Glass.release.xcconfig */,
+				9EDC58C89A45FCFACF05838E /* Pods-Mirror GlassTests.debug.xcconfig */,
+				CBBB55EB55F5F46446BC1E54 /* Pods-Mirror GlassTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		66678B642846424300A93CED = {
 			isa = PBXGroup;
 			children = (
 				66678B6F2846424300A93CED /* Mirror Glass */,
 				66678B892846424500A93CED /* Mirror GlassTests */,
-				66678B932846424500A93CED /* Mirror GlassUITests */,
 				66678B6E2846424300A93CED /* Products */,
+				416178926C28AED3EE5C7E52 /* Pods */,
+				37725A45F9ACDA4187AA8872 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,7 +103,6 @@
 			children = (
 				66678B6D2846424300A93CED /* Mirror Glass.app */,
 				66678B862846424500A93CED /* Mirror GlassTests.xctest */,
-				66678B902846424500A93CED /* Mirror GlassUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,14 +110,14 @@
 		66678B6F2846424300A93CED /* Mirror Glass */ = {
 			isa = PBXGroup;
 			children = (
+				66678B812846424500A93CED /* Info.plist */,
+				66678BA92846613F00A93CED /* R.generated.swift */,
+				66678B7E2846424500A93CED /* LaunchScreen.storyboard */,
 				66678B702846424300A93CED /* AppDelegate.swift */,
 				66678B722846424300A93CED /* SceneDelegate.swift */,
-				66678B742846424300A93CED /* ViewController.swift */,
-				66678B762846424300A93CED /* Main.storyboard */,
-				66678B7C2846424500A93CED /* Assets.xcassets */,
-				66678B7E2846424500A93CED /* LaunchScreen.storyboard */,
-				66678B812846424500A93CED /* Info.plist */,
-				66678B792846424300A93CED /* Mirror_Glass.xcdatamodeld */,
+				66678BA628465AAA00A93CED /* App */,
+				66678BA528465A9E00A93CED /* Scenes */,
+				66678BA728465CA800A93CED /* Assets */,
 			);
 			path = "Mirror Glass";
 			sourceTree = "<group>";
@@ -121,13 +130,27 @@
 			path = "Mirror GlassTests";
 			sourceTree = "<group>";
 		};
-		66678B932846424500A93CED /* Mirror GlassUITests */ = {
+		66678BA528465A9E00A93CED /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				66678B942846424500A93CED /* Mirror_GlassUITests.swift */,
-				66678B962846424500A93CED /* Mirror_GlassUITestsLaunchTests.swift */,
 			);
-			path = "Mirror GlassUITests";
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		66678BA628465AAA00A93CED /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		66678BA728465CA800A93CED /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				66678B7C2846424500A93CED /* Assets.xcassets */,
+				66678B792846424300A93CED /* Mirror_Glass.xcdatamodeld */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +160,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66678B9A2846424500A93CED /* Build configuration list for PBXNativeTarget "Mirror Glass" */;
 			buildPhases = (
+				B7E51FCFDD70DA470FC88881 /* [CP] Check Pods Manifest.lock */,
+				66678BA828465F9A00A93CED /* ShellScript */,
 				66678B692846424300A93CED /* Sources */,
 				66678B6A2846424300A93CED /* Frameworks */,
 				66678B6B2846424300A93CED /* Resources */,
+				965C22E232281C2A7FF1704D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,9 +180,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66678B9D2846424500A93CED /* Build configuration list for PBXNativeTarget "Mirror GlassTests" */;
 			buildPhases = (
+				506FA80F8F0DB9A777459421 /* [CP] Check Pods Manifest.lock */,
 				66678B822846424500A93CED /* Sources */,
 				66678B832846424500A93CED /* Frameworks */,
 				66678B842846424500A93CED /* Resources */,
+				F64B9806CEB44AFCF464CC78 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,24 +195,6 @@
 			productName = "Mirror GlassTests";
 			productReference = 66678B862846424500A93CED /* Mirror GlassTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		66678B8F2846424500A93CED /* Mirror GlassUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 66678BA02846424500A93CED /* Build configuration list for PBXNativeTarget "Mirror GlassUITests" */;
-			buildPhases = (
-				66678B8C2846424500A93CED /* Sources */,
-				66678B8D2846424500A93CED /* Frameworks */,
-				66678B8E2846424500A93CED /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				66678B922846424500A93CED /* PBXTargetDependency */,
-			);
-			name = "Mirror GlassUITests";
-			productName = "Mirror GlassUITests";
-			productReference = 66678B902846424500A93CED /* Mirror GlassUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -200,10 +210,6 @@
 						CreatedOnToolsVersion = 13.3;
 					};
 					66678B852846424500A93CED = {
-						CreatedOnToolsVersion = 13.3;
-						TestTargetID = 66678B6C2846424300A93CED;
-					};
-					66678B8F2846424500A93CED = {
 						CreatedOnToolsVersion = 13.3;
 						TestTargetID = 66678B6C2846424300A93CED;
 					};
@@ -224,7 +230,6 @@
 			targets = (
 				66678B6C2846424300A93CED /* Mirror Glass */,
 				66678B852846424500A93CED /* Mirror GlassTests */,
-				66678B8F2846424500A93CED /* Mirror GlassUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -236,7 +241,6 @@
 			files = (
 				66678B802846424500A93CED /* LaunchScreen.storyboard in Resources */,
 				66678B7D2846424500A93CED /* Assets.xcassets in Resources */,
-				66678B782846424300A93CED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,24 +251,117 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		66678B8E2846424500A93CED /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		506FA80F8F0DB9A777459421 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mirror GlassTests-checkManifestLockResult.txt",
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
-/* End PBXResourcesBuildPhase section */
+		66678BA828465F9A00A93CED /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		965C22E232281C2A7FF1704D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mirror Glass/Pods-Mirror Glass-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mirror Glass/Pods-Mirror Glass-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mirror Glass/Pods-Mirror Glass-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7E51FCFDD70DA470FC88881 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mirror Glass-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F64B9806CEB44AFCF464CC78 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mirror GlassTests/Pods-Mirror GlassTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mirror GlassTests/Pods-Mirror GlassTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mirror GlassTests/Pods-Mirror GlassTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		66678B692846424300A93CED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66678B752846424300A93CED /* ViewController.swift in Sources */,
 				66678B7B2846424300A93CED /* Mirror_Glass.xcdatamodeld in Sources */,
 				66678B712846424300A93CED /* AppDelegate.swift in Sources */,
 				66678B732846424300A93CED /* SceneDelegate.swift in Sources */,
+				66678BAA2846613F00A93CED /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,15 +373,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		66678B8C2846424500A93CED /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				66678B972846424500A93CED /* Mirror_GlassUITestsLaunchTests.swift in Sources */,
-				66678B952846424500A93CED /* Mirror_GlassUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -293,22 +381,9 @@
 			target = 66678B6C2846424300A93CED /* Mirror Glass */;
 			targetProxy = 66678B872846424500A93CED /* PBXContainerItemProxy */;
 		};
-		66678B922846424500A93CED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 66678B6C2846424300A93CED /* Mirror Glass */;
-			targetProxy = 66678B912846424500A93CED /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		66678B762846424300A93CED /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				66678B772846424300A93CED /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		66678B7E2846424500A93CED /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -436,6 +511,7 @@
 		};
 		66678B9B2846424500A93CED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4F2E86BAB67D9461F73EA0D /* Pods-Mirror Glass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -446,7 +522,7 @@
 				INFOPLIST_FILE = "Mirror Glass/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -458,12 +534,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		66678B9C2846424500A93CED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 552625C539C8687685FEA69E /* Pods-Mirror Glass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -474,7 +551,7 @@
 				INFOPLIST_FILE = "Mirror Glass/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -486,12 +563,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		66678B9E2846424500A93CED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EDC58C89A45FCFACF05838E /* Pods-Mirror GlassTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +590,7 @@
 		};
 		66678B9F2846424500A93CED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBBB55EB55F5F46446BC1E54 /* Pods-Mirror GlassTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -527,42 +606,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mirror Glass.app/Mirror Glass";
-			};
-			name = Release;
-		};
-		66678BA12846424500A93CED /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7PC7AW82G2;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.hittori.Mirror-GlassUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Mirror Glass";
-			};
-			name = Debug;
-		};
-		66678BA22846424500A93CED /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7PC7AW82G2;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.hittori.Mirror-GlassUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Mirror Glass";
 			};
 			name = Release;
 		};
@@ -592,15 +635,6 @@
 			buildConfigurations = (
 				66678B9E2846424500A93CED /* Debug */,
 				66678B9F2846424500A93CED /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		66678BA02846424500A93CED /* Build configuration list for PBXNativeTarget "Mirror GlassUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				66678BA12846424500A93CED /* Debug */,
-				66678BA22846424500A93CED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
