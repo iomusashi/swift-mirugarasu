@@ -1,0 +1,6 @@
+framework module Pods_Mirror_Glass {
+  umbrella header "Pods-Mirror Glass-umbrella.h"
+
+  export *
+  module * { export * }
+}
