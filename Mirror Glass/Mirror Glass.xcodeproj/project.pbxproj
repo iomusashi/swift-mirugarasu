@@ -28,6 +28,10 @@
 		66678BDC2846838500A93CED /* ManagedObjectSerializing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BDB2846838500A93CED /* ManagedObjectSerializing.swift */; };
 		66678BDE284683FC00A93CED /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BDD284683FC00A93CED /* CoreData.swift */; };
 		66678BE0284684B200A93CED /* ContextFetchability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BDF284684B200A93CED /* ContextFetchability.swift */; };
+		66678BE32846878F00A93CED /* APIClient+Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BE12846878F00A93CED /* APIClient+Track.swift */; };
+		66678BE42846878F00A93CED /* TrackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BE22846878F00A93CED /* TrackAPI.swift */; };
+		66678BEA28468C2800A93CED /* TrackRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BE828468C2800A93CED /* TrackRepositoryService.swift */; };
+		66678BEB28468C2800A93CED /* TrackRepositoryServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BE928468C2800A93CED /* TrackRepositoryServiceProtocol.swift */; };
 		87041A4F89AEFBBE12F2DBB7 /* Pods_Mirror_GlassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C67E8BD2AA1B415729F87F /* Pods_Mirror_GlassTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +72,10 @@
 		66678BDB2846838500A93CED /* ManagedObjectSerializing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectSerializing.swift; sourceTree = "<group>"; };
 		66678BDD284683FC00A93CED /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		66678BDF284684B200A93CED /* ContextFetchability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextFetchability.swift; sourceTree = "<group>"; };
+		66678BE12846878F00A93CED /* APIClient+Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIClient+Track.swift"; sourceTree = "<group>"; };
+		66678BE22846878F00A93CED /* TrackAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackAPI.swift; sourceTree = "<group>"; };
+		66678BE828468C2800A93CED /* TrackRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRepositoryService.swift; sourceTree = "<group>"; };
+		66678BE928468C2800A93CED /* TrackRepositoryServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRepositoryServiceProtocol.swift; sourceTree = "<group>"; };
 		9EDC58C89A45FCFACF05838E /* Pods-Mirror GlassTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mirror GlassTests.debug.xcconfig"; path = "Target Support Files/Pods-Mirror GlassTests/Pods-Mirror GlassTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CBBB55EB55F5F46446BC1E54 /* Pods-Mirror GlassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mirror GlassTests.release.xcconfig"; path = "Target Support Files/Pods-Mirror GlassTests/Pods-Mirror GlassTests.release.xcconfig"; sourceTree = "<group>"; };
 		D4F2E86BAB67D9461F73EA0D /* Pods-Mirror Glass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mirror Glass.debug.xcconfig"; path = "Target Support Files/Pods-Mirror Glass/Pods-Mirror Glass.debug.xcconfig"; sourceTree = "<group>"; };
@@ -283,6 +291,8 @@
 		66678BD32846800400A93CED /* Tracks */ = {
 			isa = PBXGroup;
 			children = (
+				66678BE12846878F00A93CED /* APIClient+Track.swift */,
+				66678BE22846878F00A93CED /* TrackAPI.swift */,
 			);
 			path = Tracks;
 			sourceTree = "<group>";
@@ -298,6 +308,8 @@
 		66678BD52846801500A93CED /* Tracks */ = {
 			isa = PBXGroup;
 			children = (
+				66678BE828468C2800A93CED /* TrackRepositoryService.swift */,
+				66678BE928468C2800A93CED /* TrackRepositoryServiceProtocol.swift */,
 			);
 			path = Tracks;
 			sourceTree = "<group>";
@@ -538,6 +550,9 @@
 				66678BBF2846760400A93CED /* AnyDecodable.swift in Sources */,
 				66678B7B2846424300A93CED /* Mirror_Glass.xcdatamodeld in Sources */,
 				66678BE0284684B200A93CED /* ContextFetchability.swift in Sources */,
+				66678BEA28468C2800A93CED /* TrackRepositoryService.swift in Sources */,
+				66678BE32846878F00A93CED /* APIClient+Track.swift in Sources */,
+				66678BEB28468C2800A93CED /* TrackRepositoryServiceProtocol.swift in Sources */,
 				66678B712846424300A93CED /* AppDelegate.swift in Sources */,
 				66678BCD28467C1800A93CED /* Closures.swift in Sources */,
 				66678BCF28467E2800A93CED /* ModelID.swift in Sources */,
@@ -545,6 +560,7 @@
 				66678BBC2846759900A93CED /* ApiResponse.swift in Sources */,
 				66678BAC28466C5B00A93CED /* App.swift in Sources */,
 				66678BAA2846613F00A93CED /* R.generated.swift in Sources */,
+				66678BE42846878F00A93CED /* TrackAPI.swift in Sources */,
 				66678BB128466CF000A93CED /* ApiClient.swift in Sources */,
 				66678BDE284683FC00A93CED /* CoreData.swift in Sources */,
 				66678BCA28467A5300A93CED /* Dictionary+Keypath.swift in Sources */,
