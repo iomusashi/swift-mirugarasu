@@ -32,6 +32,8 @@
 		66678BE42846878F00A93CED /* TrackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BE22846878F00A93CED /* TrackAPI.swift */; };
 		66678BEA28468C2800A93CED /* TrackRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BE828468C2800A93CED /* TrackRepositoryService.swift */; };
 		66678BEB28468C2800A93CED /* TrackRepositoryServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BE928468C2800A93CED /* TrackRepositoryServiceProtocol.swift */; };
+		66678BF1284696FF00A93CED /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BF0284696FF00A93CED /* BaseController.swift */; };
+		66678BF4284698B300A93CED /* UINavigationBar+Transparency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BF3284698B300A93CED /* UINavigationBar+Transparency.swift */; };
 		87041A4F89AEFBBE12F2DBB7 /* Pods_Mirror_GlassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C67E8BD2AA1B415729F87F /* Pods_Mirror_GlassTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,8 @@
 		66678BE22846878F00A93CED /* TrackAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackAPI.swift; sourceTree = "<group>"; };
 		66678BE828468C2800A93CED /* TrackRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRepositoryService.swift; sourceTree = "<group>"; };
 		66678BE928468C2800A93CED /* TrackRepositoryServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRepositoryServiceProtocol.swift; sourceTree = "<group>"; };
+		66678BF0284696FF00A93CED /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		66678BF3284698B300A93CED /* UINavigationBar+Transparency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Transparency.swift"; sourceTree = "<group>"; };
 		9EDC58C89A45FCFACF05838E /* Pods-Mirror GlassTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mirror GlassTests.debug.xcconfig"; path = "Target Support Files/Pods-Mirror GlassTests/Pods-Mirror GlassTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CBBB55EB55F5F46446BC1E54 /* Pods-Mirror GlassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mirror GlassTests.release.xcconfig"; path = "Target Support Files/Pods-Mirror GlassTests/Pods-Mirror GlassTests.release.xcconfig"; sourceTree = "<group>"; };
 		D4F2E86BAB67D9461F73EA0D /* Pods-Mirror Glass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mirror Glass.debug.xcconfig"; path = "Target Support Files/Pods-Mirror Glass/Pods-Mirror Glass.debug.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 		66678BAD28466CCC00A93CED /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				66678BEF284696EB00A93CED /* UI */,
 				66678BCB28467C1200A93CED /* Helpers */,
 				66678BC6284679F300A93CED /* Extensions */,
 				66678BC3284677B600A93CED /* Models */,
@@ -248,6 +253,7 @@
 		66678BC6284679F300A93CED /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				66678BF2284698A800A93CED /* UIKit */,
 				66678BC728467A0400A93CED /* DateFormatter+Static.swift */,
 				66678BC928467A5300A93CED /* Dictionary+Keypath.swift */,
 			);
@@ -338,6 +344,22 @@
 				66678BDF284684B200A93CED /* ContextFetchability.swift */,
 			);
 			path = Persistence;
+			sourceTree = "<group>";
+		};
+		66678BEF284696EB00A93CED /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				66678BF0284696FF00A93CED /* BaseController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		66678BF2284698A800A93CED /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				66678BF3284698B300A93CED /* UINavigationBar+Transparency.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -552,6 +574,7 @@
 				66678BE0284684B200A93CED /* ContextFetchability.swift in Sources */,
 				66678BEA28468C2800A93CED /* TrackRepositoryService.swift in Sources */,
 				66678BE32846878F00A93CED /* APIClient+Track.swift in Sources */,
+				66678BF4284698B300A93CED /* UINavigationBar+Transparency.swift in Sources */,
 				66678BEB28468C2800A93CED /* TrackRepositoryServiceProtocol.swift in Sources */,
 				66678B712846424300A93CED /* AppDelegate.swift in Sources */,
 				66678BCD28467C1800A93CED /* Closures.swift in Sources */,
@@ -565,6 +588,7 @@
 				66678BDE284683FC00A93CED /* CoreData.swift in Sources */,
 				66678BCA28467A5300A93CED /* Dictionary+Keypath.swift in Sources */,
 				66678BD92846805000A93CED /* Track.swift in Sources */,
+				66678BF1284696FF00A93CED /* BaseController.swift in Sources */,
 				66678BDC2846838500A93CED /* ManagedObjectSerializing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
