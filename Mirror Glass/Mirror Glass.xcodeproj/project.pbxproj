@@ -15,6 +15,14 @@
 		66678B802846424500A93CED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66678B7E2846424500A93CED /* LaunchScreen.storyboard */; };
 		66678B8B2846424500A93CED /* Mirror_GlassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678B8A2846424500A93CED /* Mirror_GlassTests.swift */; };
 		66678BAA2846613F00A93CED /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BA92846613F00A93CED /* R.generated.swift */; };
+		66678BAC28466C5B00A93CED /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BAB28466C5B00A93CED /* App.swift */; };
+		66678BB128466CF000A93CED /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BB028466CF000A93CED /* ApiClient.swift */; };
+		66678BBC2846759900A93CED /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BBB2846759900A93CED /* ApiResponse.swift */; };
+		66678BBF2846760400A93CED /* AnyDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BBE2846760400A93CED /* AnyDecodable.swift */; };
+		66678BC5284677BC00A93CED /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BC4284677BC00A93CED /* Model.swift */; };
+		66678BC828467A0400A93CED /* DateFormatter+Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BC728467A0400A93CED /* DateFormatter+Static.swift */; };
+		66678BCA28467A5300A93CED /* Dictionary+Keypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BC928467A5300A93CED /* Dictionary+Keypath.swift */; };
+		66678BCD28467C1800A93CED /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678BCC28467C1800A93CED /* Closures.swift */; };
 		87041A4F89AEFBBE12F2DBB7 /* Pods_Mirror_GlassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C67E8BD2AA1B415729F87F /* Pods_Mirror_GlassTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +50,14 @@
 		66678B862846424500A93CED /* Mirror GlassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mirror GlassTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66678B8A2846424500A93CED /* Mirror_GlassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mirror_GlassTests.swift; sourceTree = "<group>"; };
 		66678BA92846613F00A93CED /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		66678BAB28466C5B00A93CED /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		66678BB028466CF000A93CED /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		66678BBB2846759900A93CED /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		66678BBE2846760400A93CED /* AnyDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyDecodable.swift; sourceTree = "<group>"; };
+		66678BC4284677BC00A93CED /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		66678BC728467A0400A93CED /* DateFormatter+Static.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Static.swift"; sourceTree = "<group>"; };
+		66678BC928467A5300A93CED /* Dictionary+Keypath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Keypath.swift"; sourceTree = "<group>"; };
+		66678BCC28467C1800A93CED /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
 		9EDC58C89A45FCFACF05838E /* Pods-Mirror GlassTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mirror GlassTests.debug.xcconfig"; path = "Target Support Files/Pods-Mirror GlassTests/Pods-Mirror GlassTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CBBB55EB55F5F46446BC1E54 /* Pods-Mirror GlassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mirror GlassTests.release.xcconfig"; path = "Target Support Files/Pods-Mirror GlassTests/Pods-Mirror GlassTests.release.xcconfig"; sourceTree = "<group>"; };
 		D4F2E86BAB67D9461F73EA0D /* Pods-Mirror Glass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mirror Glass.debug.xcconfig"; path = "Target Support Files/Pods-Mirror Glass/Pods-Mirror Glass.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +133,7 @@
 				66678B722846424300A93CED /* SceneDelegate.swift */,
 				66678BA628465AAA00A93CED /* App */,
 				66678BA528465A9E00A93CED /* Scenes */,
+				66678BAD28466CCC00A93CED /* Core */,
 				66678BA728465CA800A93CED /* Assets */,
 			);
 			path = "Mirror Glass";
@@ -140,6 +157,7 @@
 		66678BA628465AAA00A93CED /* App */ = {
 			isa = PBXGroup;
 			children = (
+				66678BAB28466C5B00A93CED /* App.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -151,6 +169,76 @@
 				66678B792846424300A93CED /* Mirror_Glass.xcdatamodeld */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		66678BAD28466CCC00A93CED /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				66678BCB28467C1200A93CED /* Helpers */,
+				66678BC6284679F300A93CED /* Extensions */,
+				66678BC3284677B600A93CED /* Models */,
+				66678BAE28466CD600A93CED /* Clients */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		66678BAE28466CD600A93CED /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				66678BAF28466CD900A93CED /* API */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		66678BAF28466CD900A93CED /* API */ = {
+			isa = PBXGroup;
+			children = (
+				66678BB5284671B100A93CED /* Models */,
+				66678BB028466CF000A93CED /* ApiClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		66678BB5284671B100A93CED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				66678BBD284675B200A93CED /* Helpers */,
+				66678BBB2846759900A93CED /* ApiResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		66678BBD284675B200A93CED /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				66678BBE2846760400A93CED /* AnyDecodable.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		66678BC3284677B600A93CED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				66678BC4284677BC00A93CED /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		66678BC6284679F300A93CED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				66678BC728467A0400A93CED /* DateFormatter+Static.swift */,
+				66678BC928467A5300A93CED /* Dictionary+Keypath.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		66678BCB28467C1200A93CED /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				66678BCC28467C1800A93CED /* Closures.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,10 +446,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66678BC828467A0400A93CED /* DateFormatter+Static.swift in Sources */,
+				66678BC5284677BC00A93CED /* Model.swift in Sources */,
+				66678BBF2846760400A93CED /* AnyDecodable.swift in Sources */,
 				66678B7B2846424300A93CED /* Mirror_Glass.xcdatamodeld in Sources */,
 				66678B712846424300A93CED /* AppDelegate.swift in Sources */,
+				66678BCD28467C1800A93CED /* Closures.swift in Sources */,
 				66678B732846424300A93CED /* SceneDelegate.swift in Sources */,
+				66678BBC2846759900A93CED /* ApiResponse.swift in Sources */,
+				66678BAC28466C5B00A93CED /* App.swift in Sources */,
 				66678BAA2846613F00A93CED /* R.generated.swift in Sources */,
+				66678BB128466CF000A93CED /* ApiClient.swift in Sources */,
+				66678BCA28467A5300A93CED /* Dictionary+Keypath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

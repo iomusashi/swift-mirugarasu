@@ -10,6 +10,11 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+  static var shared: AppDelegate { UIApplication.shared.delegate as! AppDelegate }
+  var window: UIWindow?
+  
+  override init() {}
+  
   func application(
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
