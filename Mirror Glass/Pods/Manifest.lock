@@ -25,6 +25,7 @@ PODS:
     - RxCocoa (~> 6.0)
     - RxSwiftExt/Core
   - SVProgressHUD (2.2.5)
+  - SwiftDate (6.3.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.6.1)
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - RxSwift (~> 6.5.0)
   - RxSwiftExt (~> 6.0.1)
   - SVProgressHUD (~> 2.2.5)
+  - SwiftDate (~> 6.3.1)
 
 SPEC REPOS:
   trunk:
@@ -53,6 +55,7 @@ SPEC REPOS:
     - RxSwift
     - RxSwiftExt
     - SVProgressHUD
+    - SwiftDate
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
@@ -68,7 +71,8 @@ SPEC CHECKSUMS:
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   RxSwiftExt: d61c4b9b06e0a448041b1c659e0f1b5c5a035afc
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
 
-PODFILE CHECKSUM: 00e369318044f094b4a2b9189a2b8792c52de935
+PODFILE CHECKSUM: e5331eacd38c27fef7ee30ab19dab80ef37c819c
 
 COCOAPODS: 1.11.2
