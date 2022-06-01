@@ -9,5 +9,7 @@ import Foundation
 
 protocol DetailViewModelProtocol {
   var trackViewModel: TrackCellViewModelProtocol { get }
+  
   func markLastVisited()
+  func trackFavorite(changed: Bool)
 }

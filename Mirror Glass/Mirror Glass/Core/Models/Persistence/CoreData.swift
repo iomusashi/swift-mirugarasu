@@ -14,9 +14,7 @@ protocol PersistentStack {
   
   var persistentContainerName: String { get }
   var persistentContainer: NSPersistentContainer { get }
-  var viewContext: NSManagedObjectContext { get }
   var saveContext: NSManagedObjectContext { get }
-  var lookupContext: NSManagedObjectContext { get }
   
   func save()
 }
@@ -28,7 +26,7 @@ class CoreData: PersistentStack {
   }()
   
   var persistentContainerName: String {
-    return "mirrorglass.0.0.1"
+    return "mirrorglass.0.0.3"
   }
   
   lazy var persistentContainer: NSPersistentContainer = {
@@ -57,11 +55,16 @@ class CoreData: PersistentStack {
   
   // MARK: – Core Data Saving support
   func save() {
+    guard saveContext.hasChanges else {
+      fatalError()
+      return
+    }
     do {
       try saveContext.save()
     } catch {
       guard let error = error as NSError? else { return }
       print("Unresolved error \(error), \(error.userInfo)")
+      fatalError()
     }
   }
 }

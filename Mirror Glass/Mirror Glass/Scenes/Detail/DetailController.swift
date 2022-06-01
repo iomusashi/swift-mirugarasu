@@ -54,6 +54,11 @@ extension DetailController {
     setup()
     bind()
   }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    viewModel.markLastVisited()
+  }
 }
 
 // MARK: - Setup
@@ -180,6 +185,10 @@ extension DetailController: UICollectionViewDataSource {
       for: indexPath
     ) as? TrackCell else { return UICollectionViewCell() }
     cell.viewModel = viewModel.trackViewModel
+    cell.onFavoriteTapped = { [weak self] isFavorite in
+      self?.viewModel.trackFavorite(changed: isFavorite)
+      self?.collectionView.reloadData()
+    }
     return cell
   }
 }
@@ -197,5 +206,13 @@ extension DetailController: UICollectionViewDelegate {
     forItemAt indexPath: IndexPath
   ) {
     cell.layoutIfNeeded()
+  }
+}
+
+// MARK: DetailController.SectionKind
+
+extension DetailController {
+  enum SectionKind: Int, CaseIterable {
+    case playbackControl = 0, detailView
   }
 }

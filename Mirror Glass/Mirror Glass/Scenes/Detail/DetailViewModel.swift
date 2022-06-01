@@ -23,11 +23,21 @@ extension DetailViewModel {
   func markLastVisited() {
     guard !isEditing else { return }
     isEditing.toggle()
-    let mo = track.asManagedObject(context: CoreData.stack.saveContext)
-    mo?.setValue(Date.now, forKey: "lastVisited")
-    CoreData.stack.save()
-    isEditing.toggle()
+    if let matched = CoreData.stack.saveContext.findFirst(TrackEntity.self, withId: track.id.rawValue) {
+      matched.lastVisited = .now
+      CoreData.stack.save()
+      track = Track.from(entity: matched)
+    } else {
+      guard let mo = track.asManagedObject(context: CoreData.stack.saveContext) else { return }
+      mo.setValue(Date.now, forKey: "lastVisited")
+      CoreData.stack.save()
+      isEditing.toggle()
+    }
     return
+  }
+  
+  func trackFavorite(changed: Bool) {
+    self.track.isFavorite = changed
   }
 }
 

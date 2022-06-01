@@ -95,7 +95,7 @@ private extension TabBarController {
     let favNav = createNavigation(
       withRoot: favoritesController,
       title: "Favorites",
-      image: UIImage(systemName: "star.fill")!
+      image: UIImage(systemName: "heart.fill")!
     )
     controllers.append(favNav)
   }

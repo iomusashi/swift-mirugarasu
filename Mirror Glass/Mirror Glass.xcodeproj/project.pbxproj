@@ -10,7 +10,7 @@
 		203F14D9D42A8240BA393EFB /* Pods_Mirror_Glass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20C556C8D36AE011B84B6AAA /* Pods_Mirror_Glass.framework */; };
 		66678B712846424300A93CED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678B702846424300A93CED /* AppDelegate.swift */; };
 		66678B732846424300A93CED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678B722846424300A93CED /* SceneDelegate.swift */; };
-		66678B7B2846424300A93CED /* mirrorglass.0.0.1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66678B792846424300A93CED /* mirrorglass.0.0.1.xcdatamodeld */; };
+		66678B7B2846424300A93CED /* mirrorglass.0.0.3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66678B792846424300A93CED /* mirrorglass.0.0.3.xcdatamodeld */; };
 		66678B7D2846424500A93CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66678B7C2846424500A93CED /* Assets.xcassets */; };
 		66678B802846424500A93CED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66678B7E2846424500A93CED /* LaunchScreen.storyboard */; };
 		66678B8B2846424500A93CED /* Mirror_GlassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678B8A2846424500A93CED /* Mirror_GlassTests.swift */; };
@@ -250,7 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				66678B7C2846424500A93CED /* Assets.xcassets */,
-				66678B792846424300A93CED /* mirrorglass.0.0.1.xcdatamodeld */,
+				66678B792846424300A93CED /* mirrorglass.0.0.3.xcdatamodeld */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -765,7 +765,7 @@
 				66678C072846A06900A93CED /* HomeController.swift in Sources */,
 				66678BFE28469B9E00A93CED /* TabBarViewModelProtocol.swift in Sources */,
 				66678BBF2846760400A93CED /* AnyDecodable.swift in Sources */,
-				66678B7B2846424300A93CED /* mirrorglass.0.0.1.xcdatamodeld in Sources */,
+				66678B7B2846424300A93CED /* mirrorglass.0.0.3.xcdatamodeld in Sources */,
 				66678BE0284684B200A93CED /* ContextFetchability.swift in Sources */,
 				66678BEA28468C2800A93CED /* TrackRepositoryService.swift in Sources */,
 				66678BE32846878F00A93CED /* APIClient+Track.swift in Sources */,
@@ -1090,13 +1090,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		66678B792846424300A93CED /* mirrorglass.0.0.1.xcdatamodeld */ = {
+		66678B792846424300A93CED /* mirrorglass.0.0.3.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				66678B7A2846424300A93CED /* Mirror_Glass.xcdatamodel */,
 			);
 			currentVersion = 66678B7A2846424300A93CED /* Mirror_Glass.xcdatamodel */;
-			path = mirrorglass.0.0.1.xcdatamodeld;
+			path = mirrorglass.0.0.3.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -45,6 +45,10 @@ struct Track: APIModel, ModelIdentifiable, Codable {
 }
 
 extension Track: ManagedObjectSerializing {
+  enum IgnoredNetworkDecodingKeys: String {
+    case isFavorite, lastVisited
+  }
+  
   static func from(entity mo: TrackEntity) -> Track {
     return Track(
       id: Track.ID(mo.id),
@@ -65,6 +69,7 @@ extension Track: ManagedObjectSerializing {
       let mirror = Mirror(reflecting: self)
       guard mirror.displayStyle == Mirror.DisplayStyle.struct else { return nil }
       for case let (key?, value) in mirror.children {
+        guard IgnoredNetworkDecodingKeys(rawValue: key) == nil else { continue }
         guard let unwrapped = Self.unwrap(value) else { continue }
         fetchedMo.setValue(unwrapped, forKey: key)
       }
