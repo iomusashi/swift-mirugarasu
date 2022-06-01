@@ -12,20 +12,19 @@ import Alamofire
 extension ApiClient: TrackAPI {
   @discardableResult
   func getTracks(
-    term: String = "star",
-    country: String = "au",
-    media: ITunesMediaType = .movie,
+    parameters: TrackRequestParameters,
     onSuccess: @escaping SingleResult<[Track]>,
     onFailure: @escaping ErrorResult
   ) -> DataRequest {
-    var parameters: Parameters = [:]
-    parameters["term"] = term
-    parameters["country"] = country
-    parameters["media"] = media.rawValue
+    let params: Parameters = [
+      "term": parameters.term,
+      "country": parameters.country,
+      "media": parameters.media.rawValue
+    ]
     
     return request(
       "search",
-      parameters: parameters,
+      parameters: params,
       success: decodeModel(
         onSuccess: onSuccess,
         onError: onFailure

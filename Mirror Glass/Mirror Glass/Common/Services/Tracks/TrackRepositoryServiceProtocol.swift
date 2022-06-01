@@ -9,9 +9,7 @@ import Foundation
 
 protocol TrackRepositoryServiceProtocol {
   func search(
-    term: String,
-    country: String,
-    media: ITunesMediaType,
+    parameters: TrackRequestParameters,
     onSuccess: @escaping SingleResult<[Track]>,
     onFailure: @escaping ErrorResult
   )

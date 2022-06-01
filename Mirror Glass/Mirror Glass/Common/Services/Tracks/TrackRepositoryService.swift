@@ -19,16 +19,12 @@ class TrackRepositoryService: TrackRepositoryServiceProtocol {
 
 extension TrackRepositoryService {
   func search(
-    term: String,
-    country: String,
-    media: ITunesMediaType,
+    parameters: TrackRequestParameters,
     onSuccess: @escaping SingleResult<[Track]>,
     onFailure: @escaping ErrorResult
   ) {
     api.getTracks(
-      term: term,
-      country: country,
-      media: media,
+      parameters: parameters,
       onSuccess: onSuccess,
       onFailure: fetchCachedResultsOnNetworkFailure(
         onSuccess: onSuccess,
