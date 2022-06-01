@@ -27,7 +27,7 @@ class CoreData: PersistentStack {
   }()
   
   var persistentContainerName: String {
-    return "Mirror_Glass"
+    return "mirrorglass.0.0.1"
   }
   
   lazy var persistentContainer: NSPersistentContainer = {

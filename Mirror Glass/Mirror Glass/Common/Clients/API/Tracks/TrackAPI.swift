@@ -9,16 +9,14 @@ import Foundation
 import Alamofire
 
 /// https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/Searching.html
-enum ITunesMediaType: String {
+enum ITunesMediaType: String, Codable {
   case movie, podcast, music
 }
 
 protocol TrackAPI {
   @discardableResult
   func getTracks(
-    term: String,
-    country: String,
-    media: ITunesMediaType,
+    parameters: TrackRequestParameters,
     onSuccess: @escaping SingleResult<[Track]>,
     onFailure: @escaping ErrorResult
   ) -> DataRequest
