@@ -54,6 +54,12 @@ class HomeController: BaseController {
     view.addSubview(button)
     return view
   }()
+  
+  private(set) lazy var refreshControl: UIRefreshControl = {
+    let refreshControl = UIRefreshControl()
+    refreshControl.addTarget(self, action: #selector(fetchData), for: .valueChanged)
+    return refreshControl
+  }()
 }
 
 // MARK: - Lifecycle
@@ -71,11 +77,6 @@ extension HomeController {
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    SVProgressHUD.show(withStatus: "Fetching tracks")
-    viewModel.fetchTracks(
-      onSuccess: handleTracksFetchingSuccess(),
-      onFailure: handleTracksFetchingFailure()
-    )
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -91,6 +92,7 @@ private extension HomeController {
     setupSearchButton()
     setupTitleLabel()
     setupCollectionView()
+    triggerInitialLoad()
   }
   
   func setupBlobs() {
@@ -119,6 +121,7 @@ private extension HomeController {
     collectionView.autoPinEdge(.leading, to: .leading, of: view)
     collectionView.autoPinEdge(.trailing, to: .trailing, of: view)
     collectionView.autoPinEdge(.bottom, to: .bottom, of: view)
+    collectionView.addSubview(refreshControl)
     
     setupCollectionViewDelegates()
     setupCell()
@@ -167,12 +170,14 @@ private extension HomeController {
   func handleTracksFetchingSuccess() -> VoidResult {
     return { [weak self] in
       SVProgressHUD.dismiss()
+      self?.refreshControl.endRefreshing()
       self?.collectionView.reloadData()
     }
   }
   
   func handleTracksFetchingFailure() -> ErrorResult {
-    return { error in
+    return { [weak self] error in
+      self?.refreshControl.endRefreshing()
       SVProgressHUD.dismiss()
       SVProgressHUD.showError(withStatus: error.localizedDescription)
     }
@@ -182,7 +187,17 @@ private extension HomeController {
 // MARK: - Helpers
 
 private extension HomeController {
+  func triggerInitialLoad() {
+    SVProgressHUD.show(withStatus: "Fetching tracks")
+    fetchData()
+  }
 
+  @objc func fetchData() {
+    viewModel.fetchTracks(
+      onSuccess: handleTracksFetchingSuccess(),
+      onFailure: handleTracksFetchingFailure()
+    )
+  }
 }
 
 // MARK: - UICollectionViewDataSource
