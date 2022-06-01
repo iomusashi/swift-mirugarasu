@@ -21,12 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   ) -> Bool {
     // Override point for customization after application launch.
     App.shared.bootstrap(with: application, launchOptions: launchOptions)
-    
-    window = UIWindow(frame: UIScene.main.bounds)
-    window?.backgroundColor = R.color.background()
-    window?.tintColor = R.color.accentColor()
-    updateRootController()
-    window?.makeKeyAndVisible()
     return true
   }
   
@@ -49,15 +43,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Called when the user discards a scene session.
     // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
     // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-  }
-}
-
-extension AppDelegate {
-  func updateRootController() {
-    switchToHome()
-  }
-  
-  func switchToHome() {
-    
   }
 }

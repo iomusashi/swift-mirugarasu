@@ -17,9 +17,10 @@ class BaseController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = R.color.background()
     setupNavigationTitle()
     setupNavigationItems()
+    loadNavigationBarAppearancePreferences()
+    view.backgroundColor = R.color.background()
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -38,9 +39,9 @@ class BaseController: UIViewController {
   
   func setupNavigationTitle() {
     navigationController?.navigationBar.titleTextAttributes = [
-      NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .title2),
-      NSAttributedString.Key.foregroundColor : R.color.textOnLightRegular()!
+      NSAttributedString.Key.foregroundColor : UIColor.clear
     ]
+    navigationController?.navigationBar.isTranslucent = true
   }
 
   /// A place for adding your custom navigation bar buttons.
@@ -81,6 +82,17 @@ class BaseController: UIViewController {
     }
   }
   
+  func loadNavigationBarAppearancePreferences() {
+    let navigationBarAppearance = UINavigationBarAppearance()
+    navigationBarAppearance.configureWithTransparentBackground()
+    navigationBarAppearance.titleTextAttributes = [
+      NSAttributedString.Key.foregroundColor : UIColor.clear
+    ]
+    UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+    UINavigationBar.appearance().compactAppearance = navigationBarAppearance
+    UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+  }
+  
   @IBAction
   func backButtonTapped(_ sender: AnyObject) {
     if navigationController?.viewControllers.first != self {
@@ -88,5 +100,16 @@ class BaseController: UIViewController {
     } else if isPresentedModally {
       dismiss(animated: true, completion: nil)
     }
+  }
+}
+
+// MARK: - UIGestureRecognizerDelegate
+
+extension BaseController: UIGestureRecognizerDelegate {
+  func gestureRecognizer(
+    _ gestureRecognizer: UIGestureRecognizer,
+    shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer
+  ) -> Bool {
+    return true
   }
 }
