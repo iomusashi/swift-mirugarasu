@@ -8,41 +8,45 @@
 import Foundation
 
 class HistoryViewModel: HistoryViewModelProtocol {
-//  var onSomeCallbackEvent: VoidResult?
-//
-//  private(set) var someVariable1: Int = 0
-//
-//  private let model: SomeModel
-//  private let service: SomeService
-//
-//  init(
-//    model: SomeModel,
-//    service: SomeService = App.shared.service
-//  ) {
-//    self.model = model
-//    self.service = service
-//  }
+  private var tracks: [Track]
+  private let service: TrackRepositoryServiceProtocol
+  
+  init(
+    tracks: [Track] = [],
+    service: TrackRepositoryServiceProtocol = App.shared.tracksRepository
+  ) {
+    self.tracks = tracks
+    self.service = service
+  }
 }
 
 // MARK: - Methods
 
 extension HistoryViewModel {
-//  func someFunction1(param1: Int) {
-//
-//  }
-//
-//  func someFunction2(
-//    param1: Int,
-//    param2: String,
-//    onSuccess: @escaping VoidResult,
-//    onError: @escaping ErrorResult
-//  ) {
-//
-//  }
+  func detailViewModel(at indexPath: IndexPath) -> DetailViewModelProtocol {
+    return DetailViewModel(track: tracks[indexPath.item])
+  }
+  
+  func fetchAllLastVisited(onSuccess: @escaping VoidResult) {
+    service.fetchAllLastVisited(onSuccess: handleFetchSuccess(onSuccess: onSuccess))
+  }
+}
+
+// MARK: - Private functions
+
+extension HistoryViewModel {
+  private func handleFetchSuccess(onSuccess: @escaping VoidResult) -> SingleResult<[Track]> {
+    return { [weak self] tracks in
+      self?.tracks = tracks
+      onSuccess()
+    }
+  }
 }
 
 // MARK: - Getters
 
 extension HistoryViewModel {
-//  var someVariable2: String { model.property }
+  var trackCellViewModels: [TrackCellViewModelProtocol] {
+    tracks.map { HomeTrackCellViewModel(track: $0) }
+  }
 }
