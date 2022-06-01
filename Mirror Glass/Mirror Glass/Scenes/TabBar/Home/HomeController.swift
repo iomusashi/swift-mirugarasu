@@ -71,16 +71,9 @@ extension HomeController {
     bind()
   }
   
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-  }
-  
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-  }
-  
-  override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(animated)
+    fetchData()
   }
 }
 
@@ -189,7 +182,6 @@ private extension HomeController {
 private extension HomeController {
   func triggerInitialLoad() {
     SVProgressHUD.show(withStatus: "Fetching tracks")
-    fetchData()
   }
 
   @objc func fetchData() {

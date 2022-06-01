@@ -33,6 +33,31 @@ extension TrackRepositoryService {
     )
   }
   
+  func fetchFavorites(
+    onSuccess: @escaping SingleResult<[Track]>
+  ) {
+    let tracks = CoreData.stack.viewContext.findAll(
+      TrackEntity.self,
+      predicate: NSPredicate(format: "isFavorite = YES")
+    ).compactMap { Track.from(entity: $0) }
+    onSuccess(tracks)
+  }
+  
+  func fetchAllLastVisited(
+    onSuccess: @escaping SingleResult<[Track]>
+  ) {
+    let tracks = CoreData.stack.viewContext.findAll(
+      TrackEntity.self,
+      predicate: NSPredicate(format: "lastVisited != nil"),
+      sortDescriptors: [NSSortDescriptor(key: "lastVisited", ascending: false)]
+    ).compactMap { Track.from(entity: $0) }
+    onSuccess(tracks)
+  }
+}
+
+// MARK: - Private functions
+
+extension TrackRepositoryService {
   private func persistNetworkModels(
     onSuccess: @escaping SingleResult<[Track]>
   ) -> SingleResult<[Track]> {

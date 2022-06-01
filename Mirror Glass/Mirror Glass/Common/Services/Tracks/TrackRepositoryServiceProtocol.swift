@@ -13,4 +13,12 @@ protocol TrackRepositoryServiceProtocol {
     onSuccess: @escaping SingleResult<[Track]>,
     onFailure: @escaping ErrorResult
   )
+  
+  func fetchFavorites(
+    onSuccess: @escaping SingleResult<[Track]>
+  )
+  
+  func fetchAllLastVisited(
+    onSuccess: @escaping SingleResult<[Track]>
+  )
 }

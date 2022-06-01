@@ -49,10 +49,6 @@ class CoreData: PersistentStack {
     return persistentContainer.newBackgroundContext()
   }()
   
-  lazy var lookupContext: NSManagedObjectContext = {
-    return persistentContainer.newBackgroundContext()
-  }()
-  
   // MARK: – Core Data Saving support
   func save() {
     guard saveContext.hasChanges else {
