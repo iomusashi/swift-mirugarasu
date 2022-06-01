@@ -1,5 +1,5 @@
 //
-//  HomeTrackCellViewModel.swift
+//  DetailTrackCellViewModel.swift
 //  Mirror Glass
 //
 //  Created by インヤキ on 6/1/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HomeTrackCellViewModel: TrackCellViewModelProtocol {
+class DetailTrackCellViewModel: TrackCellViewModelProtocol {
   private let track: Track
   
   init(track: Track) {
@@ -17,20 +17,20 @@ class HomeTrackCellViewModel: TrackCellViewModelProtocol {
 
 // MARK: - Methods
 
-extension HomeTrackCellViewModel {
+extension DetailTrackCellViewModel {
 }
 
 // MARK: - Getters
 
-extension HomeTrackCellViewModel {
+extension DetailTrackCellViewModel {
   var trackImageUrl: URL { track.artworkUrl }
   var title: String { track.title }
   var genre: String { track.genre }
   var kind: String { track.kind.uppercased() }
   var shortDescription: String { track.longDescription }
   var price: String { "$\(track.price ?? .zero) \(track.currency ?? "")" }
-  var showChevronIcon: Bool { true }
-  var showShortDescription: Bool { true }
-  var showLongDescription: Bool { false }
-  var descriptionNumberOfLines: Int { 2 }
+  var showChevronIcon: Bool { false }
+  var showShortDescription: Bool { false }
+  var showLongDescription: Bool { true }
+  var descriptionNumberOfLines: Int { 0 }
 }

@@ -59,6 +59,10 @@
 		66678C312846C1C600A93CED /* HomeTrackCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678C302846C1C600A93CED /* HomeTrackCellViewModel.swift */; };
 		66678C342846CE6100A93CED /* TrackListCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678C332846CE6100A93CED /* TrackListCollectionLayout.swift */; };
 		66678C372846DC8900A93CED /* UIFont+Traits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678C362846DC8900A93CED /* UIFont+Traits.swift */; };
+		66678C3C2846F6BD00A93CED /* DetailViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678C392846F6BD00A93CED /* DetailViewModelProtocol.swift */; };
+		66678C3D2846F6BD00A93CED /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678C3A2846F6BD00A93CED /* DetailController.swift */; };
+		66678C3E2846F6BD00A93CED /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678C3B2846F6BD00A93CED /* DetailViewModel.swift */; };
+		66678C532847034000A93CED /* DetailTrackCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678C522847034000A93CED /* DetailTrackCellViewModel.swift */; };
 		87041A4F89AEFBBE12F2DBB7 /* Pods_Mirror_GlassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C67E8BD2AA1B415729F87F /* Pods_Mirror_GlassTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +134,10 @@
 		66678C302846C1C600A93CED /* HomeTrackCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrackCellViewModel.swift; sourceTree = "<group>"; };
 		66678C332846CE6100A93CED /* TrackListCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListCollectionLayout.swift; sourceTree = "<group>"; };
 		66678C362846DC8900A93CED /* UIFont+Traits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Traits.swift"; sourceTree = "<group>"; };
+		66678C392846F6BD00A93CED /* DetailViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelProtocol.swift; sourceTree = "<group>"; };
+		66678C3A2846F6BD00A93CED /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		66678C3B2846F6BD00A93CED /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		66678C522847034000A93CED /* DetailTrackCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTrackCellViewModel.swift; sourceTree = "<group>"; };
 		9EDC58C89A45FCFACF05838E /* Pods-Mirror GlassTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mirror GlassTests.debug.xcconfig"; path = "Target Support Files/Pods-Mirror GlassTests/Pods-Mirror GlassTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CBBB55EB55F5F46446BC1E54 /* Pods-Mirror GlassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mirror GlassTests.release.xcconfig"; path = "Target Support Files/Pods-Mirror GlassTests/Pods-Mirror GlassTests.release.xcconfig"; sourceTree = "<group>"; };
 		D4F2E86BAB67D9461F73EA0D /* Pods-Mirror Glass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mirror Glass.debug.xcconfig"; path = "Target Support Files/Pods-Mirror Glass/Pods-Mirror Glass.debug.xcconfig"; sourceTree = "<group>"; };
@@ -225,6 +233,7 @@
 			children = (
 				66678BFA28469B5D00A93CED /* TabBar */,
 				66678BF928469B5800A93CED /* Search */,
+				66678C382846F6A700A93CED /* Detail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -521,6 +530,7 @@
 			isa = PBXGroup;
 			children = (
 				66678C302846C1C600A93CED /* HomeTrackCellViewModel.swift */,
+				66678C522847034000A93CED /* DetailTrackCellViewModel.swift */,
 			);
 			path = CellViewModelVariants;
 			sourceTree = "<group>";
@@ -531,6 +541,16 @@
 				66678C332846CE6100A93CED /* TrackListCollectionLayout.swift */,
 			);
 			path = CollectionViewCompositionalLayout;
+			sourceTree = "<group>";
+		};
+		66678C382846F6A700A93CED /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				66678C392846F6BD00A93CED /* DetailViewModelProtocol.swift */,
+				66678C3A2846F6BD00A93CED /* DetailController.swift */,
+				66678C3B2846F6BD00A93CED /* DetailViewModel.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -756,6 +776,8 @@
 				66678C0E2846A07A00A93CED /* FavoritesViewModel.swift in Sources */,
 				66678BEB28468C2800A93CED /* TrackRepositoryServiceProtocol.swift in Sources */,
 				66678C232846B3D600A93CED /* TrackRequestParameters.swift in Sources */,
+				66678C3D2846F6BD00A93CED /* DetailController.swift in Sources */,
+				66678C3C2846F6BD00A93CED /* DetailViewModelProtocol.swift in Sources */,
 				66678B712846424300A93CED /* AppDelegate.swift in Sources */,
 				66678C082846A06900A93CED /* HomeViewModel.swift in Sources */,
 				66678C192846A0A400A93CED /* AboutController.swift in Sources */,
@@ -770,6 +792,7 @@
 				66678C062846A06900A93CED /* HomeViewModelProtocol.swift in Sources */,
 				66678C0228469FFC00A93CED /* UIViewController+Dismiss.swift in Sources */,
 				66678BAA2846613F00A93CED /* R.generated.swift in Sources */,
+				66678C3E2846F6BD00A93CED /* DetailViewModel.swift in Sources */,
 				66678BE42846878F00A93CED /* TrackAPI.swift in Sources */,
 				66678BFF28469B9E00A93CED /* TabBarController.swift in Sources */,
 				66678C2C2846B57700A93CED /* TrackCell.swift in Sources */,
@@ -784,6 +807,7 @@
 				66678C342846CE6100A93CED /* TrackListCollectionLayout.swift in Sources */,
 				66678BF1284696FF00A93CED /* BaseController.swift in Sources */,
 				66678BDC2846838500A93CED /* ManagedObjectSerializing.swift in Sources */,
+				66678C532847034000A93CED /* DetailTrackCellViewModel.swift in Sources */,
 				66678C122846A08D00A93CED /* HistoryViewModelProtocol.swift in Sources */,
 				66678C1A2846A0A400A93CED /* AboutViewModel.swift in Sources */,
 			);

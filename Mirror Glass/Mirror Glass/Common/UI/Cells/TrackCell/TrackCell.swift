@@ -253,10 +253,11 @@ private extension TrackCell {
     titleLabel.text = viewModel.title
     genreLabel.text = viewModel.genre
     kindLabel.text = viewModel.kind
-    shortDescriptionLabel.text = viewModel.shortDescription
     priceLabel.text = viewModel.price
     chevronImageView.isHidden = !viewModel.showChevronIcon
-    shortDescriptionLabel.isHidden = !viewModel.showDescription
+    shortDescriptionLabel.isHidden = !viewModel.showShortDescription && !viewModel.showLongDescription
+    shortDescriptionLabel.numberOfLines = viewModel.descriptionNumberOfLines
+    shortDescriptionLabel.text = viewModel.shortDescription
   }
 }
 

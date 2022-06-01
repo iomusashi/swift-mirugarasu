@@ -14,6 +14,7 @@ import RxSwift
 class TabBarController: UITabBarController {
   var viewModel: TabBarViewModelProtocol!
   var controllers: [UIViewController] = []
+  var setupFlag: Bool = false
 }
 
 // MARK: - Lifecycle
@@ -65,11 +66,13 @@ private extension TabBarController {
   }
   
   func setupTabItems() {
+    guard !setupFlag else { return }
     setupHome()
     setupFavorites()
     setupHistory()
     setupAbout()
     setupTabBar()
+    setupFlag = true
   }
   
   func setupHome() {

@@ -15,5 +15,7 @@ protocol TrackCellViewModelProtocol {
   var shortDescription: String { get }
   var price: String { get }
   var showChevronIcon: Bool { get }
-  var showDescription: Bool { get }
+  var showShortDescription: Bool { get }
+  var showLongDescription: Bool { get }
+  var descriptionNumberOfLines: Int { get }
 }

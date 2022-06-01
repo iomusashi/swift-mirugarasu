@@ -145,11 +145,11 @@ private extension HomeController {
 // MARK: - Router
 
 private extension HomeController {
-//  func presentSomeController() {
-//    let vc = R.storyboard.someController.SomeController()!
-//    vc.viewModel = SomeViewModel()
-//    navigationController?.pushViewController(vc, animated: true)
-//  }
+  func navigateToDetailView(withViewModel detailViewModel: DetailViewModelProtocol) {
+    let vc = DetailController()
+    vc.viewModel = detailViewModel
+    navigationController?.pushViewController(vc, animated: true)
+  }
 }
 
 // MARK: - Actions
@@ -219,6 +219,8 @@ extension HomeController: UICollectionViewDataSource {
 extension HomeController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     collectionView.deselectItem(at: indexPath, animated: false)
+    let detailViewModel = viewModel.detailViewModel(at: indexPath)
+    navigateToDetailView(withViewModel: detailViewModel)
   }
   
   func collectionView(

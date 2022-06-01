@@ -16,6 +16,7 @@ protocol PersistentStack {
   var persistentContainer: NSPersistentContainer { get }
   var viewContext: NSManagedObjectContext { get }
   var saveContext: NSManagedObjectContext { get }
+  var lookupContext: NSManagedObjectContext { get }
   
   func save()
 }
@@ -47,6 +48,10 @@ class CoreData: PersistentStack {
   
   /// Context to save objects
   lazy var saveContext: NSManagedObjectContext = {
+    return persistentContainer.newBackgroundContext()
+  }()
+  
+  lazy var lookupContext: NSManagedObjectContext = {
     return persistentContainer.newBackgroundContext()
   }()
   

@@ -23,6 +23,10 @@ class HomeViewModel: HomeViewModelProtocol {
 // MARK: - Methods
 
 extension HomeViewModel {
+  func detailViewModel(at indexPath: IndexPath) -> DetailViewModelProtocol {
+    return DetailViewModel(track: tracks[indexPath.item])
+  }
+  
   func fetchTracks(
     onSuccess: @escaping VoidResult,
     onFailure: @escaping ErrorResult

@@ -33,7 +33,17 @@ extension TrackRepositoryService {
     )
   }
   
-  func fetchCachedResultsOnNetworkFailure(
+  private func persistNetworkModels(
+    onSuccess: @escaping SingleResult<[Track]>
+  ) -> SingleResult<[Track]> {
+    return { [weak self] tracks in
+      let _ = tracks.compactMap { $0.asManagedObject(context: CoreData.stack.saveContext) }
+      CoreData.stack.save()
+      onSuccess(tracks)
+    }
+  }
+  
+  private func fetchCachedResultsOnNetworkFailure(
     onSuccess: @escaping SingleResult<[Track]>,
     onFailure: @escaping ErrorResult
   ) -> ErrorResult {
