@@ -24,7 +24,7 @@ class FavoritesViewModel: FavoritesViewModelProtocol {
 
 extension FavoritesViewModel {
   func detailViewModel(at indexPath: IndexPath) -> DetailViewModelProtocol {
-    return DetailViewModel(track: tracks[indexPath.item])
+    return DetailViewModel(track: tracks[indexPath.item], shouldLogVisits: false)
   }
   
   func fetchFavorites(onSuccess: @escaping VoidResult) {

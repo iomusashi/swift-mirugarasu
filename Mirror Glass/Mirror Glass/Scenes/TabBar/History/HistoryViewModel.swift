@@ -24,7 +24,7 @@ class HistoryViewModel: HistoryViewModelProtocol {
 
 extension HistoryViewModel {
   func detailViewModel(at indexPath: IndexPath) -> DetailViewModelProtocol {
-    return DetailViewModel(track: tracks[indexPath.item])
+    return DetailViewModel(track: tracks[indexPath.item], shouldLogVisits: false)
   }
   
   func fetchAllLastVisited(onSuccess: @escaping VoidResult) {

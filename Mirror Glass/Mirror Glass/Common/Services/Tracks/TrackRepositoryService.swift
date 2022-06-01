@@ -38,7 +38,8 @@ extension TrackRepositoryService {
   ) {
     let tracks = CoreData.stack.viewContext.findAll(
       TrackEntity.self,
-      predicate: NSPredicate(format: "isFavorite = YES")
+      predicate: NSPredicate(format: "isFavorite = YES"),
+      sortDescriptors: [NSSortDescriptor(key: "lastVisited", ascending: false)]
     ).compactMap { Track.from(entity: $0) }
     onSuccess(tracks)
   }

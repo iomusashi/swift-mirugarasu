@@ -70,7 +70,6 @@ private extension TabBarController {
     setupHome()
     setupFavorites()
     setupHistory()
-    setupAbout()
     setupTabBar()
     setupFlag = true
   }
@@ -109,17 +108,6 @@ private extension TabBarController {
       image: UIImage(systemName: "clock.fill")!
     )
     controllers.append(hisNav)
-  }
-  
-  func setupAbout() {
-    let aboutController = AboutController()
-    aboutController.viewModel = viewModel.aboutViewModel
-    let aboutNav = createNavigation(
-      withRoot: aboutController,
-      title: "About",
-      image: UIImage(systemName: "questionmark.circle.fill")!
-    )
-    controllers.append(aboutNav)
   }
   
   func setupTabBar() {

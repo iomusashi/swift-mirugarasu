@@ -17,18 +17,25 @@ class HistoryController: BaseController {
   var viewModel: HistoryViewModelProtocol!
   
   private(set) lazy var collectionView: UICollectionView = {
+    let layout = CardsCollectionViewLayout()
+    layout.isRotated = true
     let collectionView = UICollectionView(
       frame: view.bounds,
-      collectionViewLayout: TrackListCollectionLayout().createLayout()
+      collectionViewLayout: layout
     )
+    let screenWidth = UIScreen.main.bounds.width - 40
+    layout.itemSize = CGSize(width: screenWidth,
+                                 height: 260)
     collectionView.backgroundColor = .clear
+    collectionView.isPagingEnabled = true
+    collectionView.showsVerticalScrollIndicator = false
     return collectionView
   }()
   
   private(set) lazy var blob: UIImageView = {
     let imageView = UIImageView()
     imageView.image = R.image.bgWaves2()!
-    imageView.frame = .init(x: -282, y: 200, width: 1041, height: 608)
+    imageView.frame = .init(x: -282, y: -80, width: 1041, height: 1041)
     return imageView
   }()
   

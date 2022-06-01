@@ -10,10 +10,12 @@ import Foundation
 class DetailViewModel: DetailViewModelProtocol {
   private var track: Track
   private var isEditing: Bool
+  private var shouldLogVisits: Bool
   
-  init(track: Track) {
+  init(track: Track, shouldLogVisits: Bool = true) {
     self.track = track
     self.isEditing = false
+    self.shouldLogVisits = shouldLogVisits
   }
 }
 
@@ -21,7 +23,7 @@ class DetailViewModel: DetailViewModelProtocol {
 
 extension DetailViewModel {
   func markLastVisited() {
-    guard !isEditing else { return }
+    guard !isEditing, shouldLogVisits else { return }
     isEditing.toggle()
     if let matched = CoreData.stack.saveContext.findFirst(TrackEntity.self, withId: track.id.rawValue) {
       matched.lastVisited = .now
