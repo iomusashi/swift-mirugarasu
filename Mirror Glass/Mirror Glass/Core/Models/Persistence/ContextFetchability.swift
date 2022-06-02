@@ -65,7 +65,7 @@ extension NSManagedObjectContext: ContextFetchability {
     withId id: Int64
   ) -> T? where T : NSManagedObject {
     let request = entityClass.fetchRequest() as! NSFetchRequest<T>
-    request.predicate = NSPredicate(format: "id == %@", id)
+    request.predicate = NSPredicate(format: "id == %d", id)
     do {
       let result = try fetch(request)
       return result.first

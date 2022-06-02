@@ -5,6 +5,7 @@
 //  Created by インヤキ on 6/1/22.
 //
 
+import CoreData
 import Foundation
 
 struct Track: APIModel, ModelIdentifiable, Codable {
@@ -44,6 +45,10 @@ struct Track: APIModel, ModelIdentifiable, Codable {
 }
 
 extension Track: ManagedObjectSerializing {
+  enum IgnoredNetworkDecodingKeys: String {
+    case isFavorite, lastVisited
+  }
+  
   static func from(entity mo: TrackEntity) -> Track {
     return Track(
       id: Track.ID(mo.id),
@@ -57,5 +62,34 @@ extension Track: ManagedObjectSerializing {
       kind: Track.Kind(rawValue: mo.kind!)!,
       isFavorite: mo.isFavorite
     )
+  }
+  
+  func asManagedObject(context: NSManagedObjectContext) -> NSManagedObject? {
+    if let fetchedMo = CoreData.stack.saveContext.findFirst(TrackEntity.self, withId: id.rawValue) {
+      let mirror = Mirror(reflecting: self)
+      guard mirror.displayStyle == Mirror.DisplayStyle.struct else { return nil }
+      for case let (key?, value) in mirror.children {
+        guard IgnoredNetworkDecodingKeys(rawValue: key) == nil else { continue }
+        guard let unwrapped = Self.unwrap(value) else { continue }
+        fetchedMo.setValue(unwrapped, forKey: key)
+      }
+      return fetchedMo
+    } else {
+      let entityName = type(of: self).entityName
+      guard
+        let entityDescription = NSEntityDescription.entity(
+          forEntityName: entityName,
+          in: context
+        )
+      else { return nil }
+      let mo = NSManagedObject(entity: entityDescription, insertInto: context)
+      let mirror = Mirror(reflecting: self)
+      guard mirror.displayStyle == Mirror.DisplayStyle.struct else { return nil }
+      for case let (key?, value) in mirror.children {
+        guard let unwrapped = Self.unwrap(value) else { continue }
+        mo.setValue(unwrapped, forKey: key)
+      }
+      return mo
+    }
   }
 }

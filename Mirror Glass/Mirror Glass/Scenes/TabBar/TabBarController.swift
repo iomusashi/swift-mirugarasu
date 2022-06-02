@@ -14,6 +14,7 @@ import RxSwift
 class TabBarController: UITabBarController {
   var viewModel: TabBarViewModelProtocol!
   var controllers: [UIViewController] = []
+  var setupFlag: Bool = false
 }
 
 // MARK: - Lifecycle
@@ -65,11 +66,12 @@ private extension TabBarController {
   }
   
   func setupTabItems() {
+    guard !setupFlag else { return }
     setupHome()
     setupFavorites()
     setupHistory()
-    setupAbout()
     setupTabBar()
+    setupFlag = true
   }
   
   func setupHome() {
@@ -92,7 +94,7 @@ private extension TabBarController {
     let favNav = createNavigation(
       withRoot: favoritesController,
       title: "Favorites",
-      image: UIImage(systemName: "star.fill")!
+      image: UIImage(systemName: "heart.fill")!
     )
     controllers.append(favNav)
   }
@@ -106,17 +108,6 @@ private extension TabBarController {
       image: UIImage(systemName: "clock.fill")!
     )
     controllers.append(hisNav)
-  }
-  
-  func setupAbout() {
-    let aboutController = AboutController()
-    aboutController.viewModel = viewModel.aboutViewModel
-    let aboutNav = createNavigation(
-      withRoot: aboutController,
-      title: "About",
-      image: UIImage(systemName: "questionmark.circle.fill")!
-    )
-    controllers.append(aboutNav)
   }
   
   func setupTabBar() {
