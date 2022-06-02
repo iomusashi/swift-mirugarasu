@@ -25,7 +25,10 @@ extension TrackRepositoryService {
   ) {
     api.getTracks(
       parameters: parameters,
-      onSuccess: persistNetworkModels(onSuccess: onSuccess),
+      onSuccess: persistNetworkModels(
+        shouldPersistNetworkModels: parameters.cacheResultsToDisk,
+        onSuccess: onSuccess
+      ),
       onFailure: fetchCachedResultsOnNetworkFailure(
         onSuccess: onSuccess,
         onFailure: onFailure
@@ -60,9 +63,14 @@ extension TrackRepositoryService {
 
 extension TrackRepositoryService {
   private func persistNetworkModels(
+    shouldPersistNetworkModels: Bool,
     onSuccess: @escaping SingleResult<[Track]>
   ) -> SingleResult<[Track]> {
     return { tracks in
+      guard shouldPersistNetworkModels else {
+        onSuccess(tracks)
+        return
+      }
       let mos = tracks.compactMap { $0.asManagedObject(context: CoreData.stack.saveContext) }
       CoreData.stack.save()
       let persisted = mos.map { Track.from(entity: $0 as! TrackEntity)}
