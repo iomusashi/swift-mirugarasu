@@ -1,0 +1,78 @@
+PODS:
+  - Alamofire (5.6.1)
+  - AlamofireImage (4.2.0):
+    - Alamofire (~> 5.4)
+  - Nimble (10.0.0)
+  - "NSObject+Rx (5.2.2)":
+    - RxSwift (~> 6.2)
+  - PureLayout (3.1.9)
+  - Quick (5.0.1)
+  - R.swift (6.1.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - RxSwiftExt (6.0.1):
+    - RxSwiftExt/Core (= 6.0.1)
+    - RxSwiftExt/RxCocoa (= 6.0.1)
+  - RxSwiftExt/Core (6.0.1):
+    - RxSwift (~> 6.0)
+  - RxSwiftExt/RxCocoa (6.0.1):
+    - RxCocoa (~> 6.0)
+    - RxSwiftExt/Core
+  - SVProgressHUD (2.2.5)
+  - SwiftDate (6.3.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.6.1)
+  - AlamofireImage (~> 4.2.0)
+  - Nimble (~> 10.0.0)
+  - "NSObject+Rx (~> 5.2.2)"
+  - PureLayout (~> 3.1.9)
+  - Quick (~> 5.0.1)
+  - R.swift (~> 6.1.0)
+  - RxSwift (~> 6.5.0)
+  - RxSwiftExt (~> 6.0.1)
+  - SVProgressHUD (~> 2.2.5)
+  - SwiftDate (~> 6.3.1)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - Nimble
+    - "NSObject+Rx"
+    - PureLayout
+    - Quick
+    - R.swift
+    - R.swift.Library
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - RxSwiftExt
+    - SVProgressHUD
+    - SwiftDate
+
+SPEC CHECKSUMS:
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
+  Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
+  "NSObject+Rx": 61cf1f7306a73dcef8b36649198af0813ec18dfd
+  PureLayout: 5fb5e5429519627d60d079ccb1eaa7265ce7cf88
+  Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
+  R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  RxSwiftExt: d61c4b9b06e0a448041b1c659e0f1b5c5a035afc
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
+
+PODFILE CHECKSUM: e5331eacd38c27fef7ee30ab19dab80ef37c819c
+
+COCOAPODS: 1.11.2
