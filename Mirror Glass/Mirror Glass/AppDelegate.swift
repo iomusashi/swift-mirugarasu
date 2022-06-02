@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   ) -> Bool {
     // Override point for customization after application launch.
     App.shared.bootstrap(with: application, launchOptions: launchOptions)
+    window = UIWindow(frame: UIScreen.main.bounds)
     return true
   }
   

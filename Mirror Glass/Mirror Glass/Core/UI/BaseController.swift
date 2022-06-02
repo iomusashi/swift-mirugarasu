@@ -60,7 +60,7 @@ class BaseController: UIViewController {
         target: self,
         action: #selector(backButtonTapped(_:))
       )
-      backButton.tintColor = R.color.accentColor()
+      backButton.tintColor = R.color.navTitleColor()!
       navigationItem.leftBarButtonItem = backButton
       
       // Fix for bug where swiping from left to right to go back is gone.

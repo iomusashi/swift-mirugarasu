@@ -11,14 +11,17 @@ struct TrackRequestParameters: Codable {
   var term: String
   var country: String
   var media: ITunesMediaType
+  var cacheResultsToDisk: Bool
   
   init(
     term: String = "star",
     country: String = "au",
-    media: ITunesMediaType = .movie
+    media: ITunesMediaType = .movie,
+    cacheResultsToDisk: Bool = true
   ) {
     self.term = term
     self.country = country
     self.media = media
+    self.cacheResultsToDisk = cacheResultsToDisk
   }
 }

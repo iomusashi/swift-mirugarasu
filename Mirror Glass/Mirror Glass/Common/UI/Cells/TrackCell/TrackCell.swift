@@ -23,6 +23,8 @@ class TrackCell: UICollectionViewCell {
     }
   }
   
+  var onFavoriteTapped: BoolResult?
+  
   private var disposeBag = DisposeBag()
   
   // MARK: UI Elements
@@ -111,6 +113,14 @@ class TrackCell: UICollectionViewCell {
     return imageView
   }()
   
+  private(set) lazy var favoriteButton: UIButton = {
+    let button = UIButton()
+    button.setImage(UIImage(systemName: "heart"), for: .normal)
+    button.frame = CGRect(x: 0, y: 0, width: 64, height: 64)
+    button.tintColor = R.color.textSecondary()!
+    return button
+  }()
+  
   // MARK: Constructors
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -158,7 +168,13 @@ private extension TrackCell {
     foregroundVibrancyView.contentView.addSubview(separatorView)
     foregroundVibrancyView.contentView.addSubview(priceLabel)
     foregroundVibrancyView.contentView.addSubview(chevronImageView)
+    foregroundVibrancyView.contentView.addSubview(favoriteButton)
+    setupFavButton()
     setupAutoLayoutConstraints()
+  }
+  
+  func setupFavButton() {
+    favoriteButton.addTarget(self, action: #selector(favoriteButtonTapped(_:)), for: .touchUpInside)
   }
   
   func setupAutoLayoutConstraints() {
@@ -172,6 +188,7 @@ private extension TrackCell {
     setupSeparatorViewConstraints()
     setupPriceLabelConstraints()
     setupChevronImageViewConstraints()
+    setupFavButtonConstraint()
   }
   
   func setupBackgroundMaterialViewConstraints() {
@@ -233,6 +250,11 @@ private extension TrackCell {
     chevronImageView.autoPinEdge(.bottom, to: .bottom, of: priceLabel, withOffset: -4)
     chevronImageView.autoPinEdge(.trailing, to: .trailing, of: separatorView)
   }
+  
+  func setupFavButtonConstraint() {
+    favoriteButton.autoPinEdge(.bottom, to: .bottom, of: priceLabel, withOffset: -4)
+    favoriteButton.autoPinEdge(.trailing, to: .trailing, of: separatorView)
+  }
 }
 
 // MARK: - Bindings
@@ -253,10 +275,19 @@ private extension TrackCell {
     titleLabel.text = viewModel.title
     genreLabel.text = viewModel.genre
     kindLabel.text = viewModel.kind
-    shortDescriptionLabel.text = viewModel.shortDescription
     priceLabel.text = viewModel.price
     chevronImageView.isHidden = !viewModel.showChevronIcon
+    favoriteButton.isHidden = !viewModel.showFavoriteIcon
+    if viewModel.isFavorite {
+      favoriteButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+      favoriteButton.tintColor = R.color.accentColor()!
+    } else {
+      favoriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
+      favoriteButton.tintColor = R.color.textSecondary()!
+    }
     shortDescriptionLabel.isHidden = !viewModel.showDescription
+    shortDescriptionLabel.numberOfLines = viewModel.descriptionNumberOfLines
+    shortDescriptionLabel.text = viewModel.shortDescription
   }
 }
 
@@ -264,4 +295,13 @@ private extension TrackCell {
 
 private extension TrackCell {
 
+}
+
+// MARK: - Actions
+
+private extension TrackCell {
+  @objc func favoriteButtonTapped(_ sender: UIButton) {
+    viewModel.onFavoriteStateChanged = onFavoriteTapped
+    viewModel.toggleFavorite()
+  }
 }

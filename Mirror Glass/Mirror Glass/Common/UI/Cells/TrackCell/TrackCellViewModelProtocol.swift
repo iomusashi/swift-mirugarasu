@@ -8,6 +8,8 @@
 import Foundation
 
 protocol TrackCellViewModelProtocol {
+  var onFavoriteStateChanged: BoolResult? { get set }
+  
   var trackImageUrl: URL { get }
   var title: String { get }
   var genre: String { get }
@@ -16,4 +18,9 @@ protocol TrackCellViewModelProtocol {
   var price: String { get }
   var showChevronIcon: Bool { get }
   var showDescription: Bool { get }
+  var showFavoriteIcon: Bool { get }
+  var isFavorite: Bool { get }
+  var descriptionNumberOfLines: Int { get }
+  
+  func toggleFavorite()
 }

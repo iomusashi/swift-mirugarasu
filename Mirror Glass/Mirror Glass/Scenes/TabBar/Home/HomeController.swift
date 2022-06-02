@@ -54,6 +54,12 @@ class HomeController: BaseController {
     view.addSubview(button)
     return view
   }()
+  
+  private(set) lazy var refreshControl: UIRefreshControl = {
+    let refreshControl = UIRefreshControl()
+    refreshControl.addTarget(self, action: #selector(fetchData), for: .valueChanged)
+    return refreshControl
+  }()
 }
 
 // MARK: - Lifecycle
@@ -65,21 +71,9 @@ extension HomeController {
     bind()
   }
   
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-  }
-  
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    SVProgressHUD.show(withStatus: "Fetching tracks")
-    viewModel.fetchTracks(
-      onSuccess: handleTracksFetchingSuccess(),
-      onFailure: handleTracksFetchingFailure()
-    )
-  }
-  
-  override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(animated)
+    fetchData()
   }
 }
 
@@ -91,6 +85,7 @@ private extension HomeController {
     setupSearchButton()
     setupTitleLabel()
     setupCollectionView()
+    triggerInitialLoad()
   }
   
   func setupBlobs() {
@@ -119,6 +114,7 @@ private extension HomeController {
     collectionView.autoPinEdge(.leading, to: .leading, of: view)
     collectionView.autoPinEdge(.trailing, to: .trailing, of: view)
     collectionView.autoPinEdge(.bottom, to: .bottom, of: view)
+    collectionView.addSubview(refreshControl)
     
     setupCollectionViewDelegates()
     setupCell()
@@ -145,11 +141,11 @@ private extension HomeController {
 // MARK: - Router
 
 private extension HomeController {
-//  func presentSomeController() {
-//    let vc = R.storyboard.someController.SomeController()!
-//    vc.viewModel = SomeViewModel()
-//    navigationController?.pushViewController(vc, animated: true)
-//  }
+  func navigateToDetailView(withViewModel detailViewModel: DetailViewModelProtocol) {
+    let vc = DetailController()
+    vc.viewModel = detailViewModel
+    navigationController?.pushViewController(vc, animated: true)
+  }
 }
 
 // MARK: - Actions
@@ -167,12 +163,14 @@ private extension HomeController {
   func handleTracksFetchingSuccess() -> VoidResult {
     return { [weak self] in
       SVProgressHUD.dismiss()
+      self?.refreshControl.endRefreshing()
       self?.collectionView.reloadData()
     }
   }
   
   func handleTracksFetchingFailure() -> ErrorResult {
-    return { error in
+    return { [weak self] error in
+      self?.refreshControl.endRefreshing()
       SVProgressHUD.dismiss()
       SVProgressHUD.showError(withStatus: error.localizedDescription)
     }
@@ -182,7 +180,16 @@ private extension HomeController {
 // MARK: - Helpers
 
 private extension HomeController {
+  func triggerInitialLoad() {
+    SVProgressHUD.show(withStatus: "Fetching tracks")
+  }
 
+  @objc func fetchData() {
+    viewModel.fetchTracks(
+      onSuccess: handleTracksFetchingSuccess(),
+      onFailure: handleTracksFetchingFailure()
+    )
+  }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -219,6 +226,8 @@ extension HomeController: UICollectionViewDataSource {
 extension HomeController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     collectionView.deselectItem(at: indexPath, animated: false)
+    let detailViewModel = viewModel.detailViewModel(at: indexPath)
+    navigateToDetailView(withViewModel: detailViewModel)
   }
   
   func collectionView(

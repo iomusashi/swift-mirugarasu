@@ -10,14 +10,23 @@ import Foundation
 class HomeTrackCellViewModel: TrackCellViewModelProtocol {
   private let track: Track
   
+  var onFavoriteStateChanged: BoolResult?
+  
   init(track: Track) {
-    self.track = track
+    if let mo = CoreData.stack.viewContext.findFirst(TrackEntity.self, withId: track.id.rawValue) {
+      self.track = Track.from(entity: mo)
+    } else {
+      self.track = track
+    }
   }
 }
 
 // MARK: - Methods
 
 extension HomeTrackCellViewModel {
+  func toggleFavorite() {
+    // no op
+  }
 }
 
 // MARK: - Getters
@@ -30,5 +39,8 @@ extension HomeTrackCellViewModel {
   var shortDescription: String { track.longDescription }
   var price: String { "$\(track.price ?? .zero) \(track.currency ?? "")" }
   var showChevronIcon: Bool { true }
+  var showFavoriteIcon: Bool { false }
+  var isFavorite: Bool { track.isFavorite }
   var showDescription: Bool { true }
+  var descriptionNumberOfLines: Int { 2 }
 }
