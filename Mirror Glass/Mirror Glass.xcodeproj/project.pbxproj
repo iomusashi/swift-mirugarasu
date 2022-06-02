@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		203F14D9D42A8240BA393EFB /* Pods_Mirror_Glass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20C556C8D36AE011B84B6AAA /* Pods_Mirror_Glass.framework */; };
+		6606567B284853090003D7F7 /* TrackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606567A284853090003D7F7 /* TrackTests.swift */; };
+		66065680284857950003D7F7 /* MockTrackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606567F284857950003D7F7 /* MockTrackAPI.swift */; };
+		6606568328485A210003D7F7 /* FakeUrlRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606568228485A210003D7F7 /* FakeUrlRequestConvertible.swift */; };
+		6606568828485C9F0003D7F7 /* MockTrackRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606568628485C9F0003D7F7 /* MockTrackRepositoryService.swift */; };
+		6606568928485C9F0003D7F7 /* TrackRepositoryServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606568728485C9F0003D7F7 /* TrackRepositoryServiceTests.swift */; };
+		66065690284864C00003D7F7 /* MockDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606568D284864C00003D7F7 /* MockDetailViewModel.swift */; };
+		66065692284869500003D7F7 /* MockTrackCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66065691284869500003D7F7 /* MockTrackCellViewModel.swift */; };
 		66678B712846424300A93CED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678B702846424300A93CED /* AppDelegate.swift */; };
 		66678B732846424300A93CED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678B722846424300A93CED /* SceneDelegate.swift */; };
 		66678B7B2846424300A93CED /* mirrorglass.0.0.3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66678B792846424300A93CED /* mirrorglass.0.0.3.xcdatamodeld */; };
@@ -64,6 +71,11 @@
 		66678C3E2846F6BD00A93CED /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678C3B2846F6BD00A93CED /* DetailViewModel.swift */; };
 		66678C532847034000A93CED /* DetailTrackCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678C522847034000A93CED /* DetailTrackCellViewModel.swift */; };
 		66678C602848241600A93CED /* CardsCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678C5F2848241600A93CED /* CardsCollectionViewLayout.swift */; };
+		66678C6B28483D7400A93CED /* HomeControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678C6828483D7400A93CED /* HomeControllerTests.swift */; };
+		66678C6C28483D7400A93CED /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678C6928483D7400A93CED /* HomeViewModelTests.swift */; };
+		66678C6D28483D7400A93CED /* MockHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678C6A28483D7400A93CED /* MockHomeViewModel.swift */; };
+		66678C6F28483EB500A93CED /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678C6E28483EB500A93CED /* TestingAppDelegate.swift */; };
+		66678C742848453400A93CED /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66678C732848453400A93CED /* main.swift */; };
 		87041A4F89AEFBBE12F2DBB7 /* Pods_Mirror_GlassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C67E8BD2AA1B415729F87F /* Pods_Mirror_GlassTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +93,13 @@
 		02C67E8BD2AA1B415729F87F /* Pods_Mirror_GlassTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mirror_GlassTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C556C8D36AE011B84B6AAA /* Pods_Mirror_Glass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mirror_Glass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		552625C539C8687685FEA69E /* Pods-Mirror Glass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mirror Glass.release.xcconfig"; path = "Target Support Files/Pods-Mirror Glass/Pods-Mirror Glass.release.xcconfig"; sourceTree = "<group>"; };
+		6606567A284853090003D7F7 /* TrackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTests.swift; sourceTree = "<group>"; };
+		6606567F284857950003D7F7 /* MockTrackAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTrackAPI.swift; sourceTree = "<group>"; };
+		6606568228485A210003D7F7 /* FakeUrlRequestConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUrlRequestConvertible.swift; sourceTree = "<group>"; };
+		6606568628485C9F0003D7F7 /* MockTrackRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTrackRepositoryService.swift; sourceTree = "<group>"; };
+		6606568728485C9F0003D7F7 /* TrackRepositoryServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRepositoryServiceTests.swift; sourceTree = "<group>"; };
+		6606568D284864C00003D7F7 /* MockDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailViewModel.swift; sourceTree = "<group>"; };
+		66065691284869500003D7F7 /* MockTrackCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTrackCellViewModel.swift; sourceTree = "<group>"; };
 		66678B6D2846424300A93CED /* Mirror Glass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mirror Glass.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66678B702846424300A93CED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66678B722846424300A93CED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +159,11 @@
 		66678C3B2846F6BD00A93CED /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		66678C522847034000A93CED /* DetailTrackCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTrackCellViewModel.swift; sourceTree = "<group>"; };
 		66678C5F2848241600A93CED /* CardsCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCollectionViewLayout.swift; sourceTree = "<group>"; };
+		66678C6828483D7400A93CED /* HomeControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerTests.swift; sourceTree = "<group>"; };
+		66678C6928483D7400A93CED /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		66678C6A28483D7400A93CED /* MockHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeViewModel.swift; sourceTree = "<group>"; };
+		66678C6E28483EB500A93CED /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
+		66678C732848453400A93CED /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		9EDC58C89A45FCFACF05838E /* Pods-Mirror GlassTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mirror GlassTests.debug.xcconfig"; path = "Target Support Files/Pods-Mirror GlassTests/Pods-Mirror GlassTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CBBB55EB55F5F46446BC1E54 /* Pods-Mirror GlassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mirror GlassTests.release.xcconfig"; path = "Target Support Files/Pods-Mirror GlassTests/Pods-Mirror GlassTests.release.xcconfig"; sourceTree = "<group>"; };
 		D4F2E86BAB67D9461F73EA0D /* Pods-Mirror Glass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mirror Glass.debug.xcconfig"; path = "Target Support Files/Pods-Mirror Glass/Pods-Mirror Glass.debug.xcconfig"; sourceTree = "<group>"; };
@@ -185,9 +209,60 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		6606567C2848576E0003D7F7 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				6606567E284857880003D7F7 /* Track */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		6606567E284857880003D7F7 /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				6606567F284857950003D7F7 /* MockTrackAPI.swift */,
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+		6606568128485A0E0003D7F7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6606568228485A210003D7F7 /* FakeUrlRequestConvertible.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6606568428485C600003D7F7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6606568528485C890003D7F7 /* Track */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6606568528485C890003D7F7 /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				6606568628485C9F0003D7F7 /* MockTrackRepositoryService.swift */,
+				6606568728485C9F0003D7F7 /* TrackRepositoryServiceTests.swift */,
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+		6606568A284864AC0003D7F7 /* UntestedMocks */ = {
+			isa = PBXGroup;
+			children = (
+				6606568D284864C00003D7F7 /* MockDetailViewModel.swift */,
+				66065691284869500003D7F7 /* MockTrackCellViewModel.swift */,
+			);
+			path = UntestedMocks;
+			sourceTree = "<group>";
+		};
 		66678B642846424300A93CED = {
 			isa = PBXGroup;
 			children = (
+				66678C732848453400A93CED /* main.swift */,
 				66678B6F2846424300A93CED /* Mirror Glass */,
 				66678B892846424500A93CED /* Mirror GlassTests */,
 				66678B6E2846424300A93CED /* Products */,
@@ -225,6 +300,9 @@
 		66678B892846424500A93CED /* Mirror GlassTests */ = {
 			isa = PBXGroup;
 			children = (
+				66678C6E28483EB500A93CED /* TestingAppDelegate.swift */,
+				66678C6628483D5B00A93CED /* Scenes */,
+				66678C6228483CF800A93CED /* Modules */,
 				66678B8A2846424500A93CED /* Mirror_GlassTests.swift */,
 			);
 			path = "Mirror GlassTests";
@@ -564,6 +642,60 @@
 			path = CollectionViewLayout;
 			sourceTree = "<group>";
 		};
+		66678C6228483CF800A93CED /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6606568128485A0E0003D7F7 /* Utils */,
+				6606568428485C600003D7F7 /* Services */,
+				66678C7B284846DB00A93CED /* Clients */,
+				66678C6328483D0E00A93CED /* Models */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		66678C6328483D0E00A93CED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				66678C6428483D1900A93CED /* Track */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		66678C6428483D1900A93CED /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				6606567A284853090003D7F7 /* TrackTests.swift */,
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+		66678C6628483D5B00A93CED /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				6606568A284864AC0003D7F7 /* UntestedMocks */,
+				66678C6728483D6100A93CED /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		66678C6728483D6100A93CED /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				66678C6828483D7400A93CED /* HomeControllerTests.swift */,
+				66678C6928483D7400A93CED /* HomeViewModelTests.swift */,
+				66678C6A28483D7400A93CED /* MockHomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		66678C7B284846DB00A93CED /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				6606567C2848576E0003D7F7 /* Api */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -807,6 +939,7 @@
 				66678C3E2846F6BD00A93CED /* DetailViewModel.swift in Sources */,
 				66678BE42846878F00A93CED /* TrackAPI.swift in Sources */,
 				66678BFF28469B9E00A93CED /* TabBarController.swift in Sources */,
+				66678C742848453400A93CED /* main.swift in Sources */,
 				66678C2C2846B57700A93CED /* TrackCell.swift in Sources */,
 				66678C312846C1C600A93CED /* HomeTrackCellViewModel.swift in Sources */,
 				66678C182846A0A400A93CED /* AboutViewModelProtocol.swift in Sources */,
@@ -829,7 +962,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6606568828485C9F0003D7F7 /* MockTrackRepositoryService.swift in Sources */,
+				6606568928485C9F0003D7F7 /* TrackRepositoryServiceTests.swift in Sources */,
+				66678C6F28483EB500A93CED /* TestingAppDelegate.swift in Sources */,
+				66678C6B28483D7400A93CED /* HomeControllerTests.swift in Sources */,
+				6606568328485A210003D7F7 /* FakeUrlRequestConvertible.swift in Sources */,
+				66065680284857950003D7F7 /* MockTrackAPI.swift in Sources */,
+				66678C6D28483D7400A93CED /* MockHomeViewModel.swift in Sources */,
+				6606567B284853090003D7F7 /* TrackTests.swift in Sources */,
+				66065690284864C00003D7F7 /* MockDetailViewModel.swift in Sources */,
 				66678B8B2846424500A93CED /* Mirror_GlassTests.swift in Sources */,
+				66065692284869500003D7F7 /* MockTrackCellViewModel.swift in Sources */,
+				66678C6C28483D7400A93CED /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

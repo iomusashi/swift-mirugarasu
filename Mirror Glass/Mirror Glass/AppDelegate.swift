@@ -8,7 +8,6 @@
 import UIKit
 import CoreData
 
-@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
   static var shared: AppDelegate { UIApplication.shared.delegate as! AppDelegate }
   var window: UIWindow?
