@@ -146,3 +146,17 @@ The experimental approach uses the Mirror API to map a struct to managedobject, 
 
 This approach is somehow to what I was using on my older projects written in Objective-C: Mantle, MagicalRecords, and MTLManagedObjectSerializing – all are objc libraries who handle JSON and CoreData serializing effectively.
 
+## Testing
+
+Unit tests are included as well. I should have created this docs sooner, but since I no longer have the time, please see the `Test` folder in the project, and hit `Cmd+U`.
+
+I did not seriously made the tests, as I am already late in submission, but here's the summary of the unit test I did:
+|Component|Testing methodology  |
+|--|--|
+| Models | Fake |
+| Api Client | Mock |
+| Service / Repository | Mock |
+| View Model | Mock |
+| View Controller | views are sut, depencies are mocks |
+
+
